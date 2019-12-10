@@ -14,7 +14,7 @@ class TsetEmployee(unittest.TestCase):
     def test01_post(self,username="zizz123",mobile="18787504243",workNumber="52996"):
     #     调用新增员工方法
         r=self.api.api_post_employee(username,mobile,workNumber)
-        print("新增员工后结果为：",r.json())
+        print("新增员工 后结果为：",r.json())
     #     提取id
         api.user_id=r.json().get("data").get("id")
         print("新增的员工id为：",api.user_id)
